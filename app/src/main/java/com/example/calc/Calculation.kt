@@ -201,11 +201,15 @@ class Calculation {
                 "/" -> {
                     divide()
                 }
+
             }
+
             state = 5
+
         }catch (e:Exception){
             state = 7
         }
+
     }
 
     /**
