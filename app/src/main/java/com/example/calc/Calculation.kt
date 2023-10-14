@@ -147,10 +147,10 @@ class Calculation {
                 num1
             }
             2->{
-                num2
+                num1 + operation + num2
             }
             5->{
-                resolution
+                "$num1$operation$num2=$resolution"
             }
             7->{
                 "demasiados numeros"
