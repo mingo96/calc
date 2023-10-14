@@ -150,7 +150,7 @@ class Calculation {
                 num1 + operation + num2
             }
             5->{
-                "$num1$operation$num2=$resolution"
+                if("$num1$operation$num2=$resolution".length > 12) "$num1$operation$num2=\n$resolution" else "$num1$operation$num2=$resolution"
             }
             7->{
                 "demasiados numeros"
@@ -205,6 +205,7 @@ class Calculation {
             }
 
             state = 5
+            if (resolution.length>9) throw Exception("a")
 
         }catch (e:Exception){
             state = 7
