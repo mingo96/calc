@@ -150,7 +150,7 @@ class Calculation {
                 num1 + operation + num2
             }
             5->{
-                if("$num1$operation$num2=$resolution".length > 12) "$num1$operation$num2=\n$resolution" else "$num1$operation$num2=$resolution"
+                if("$num1$operation$num2=$resolution".length > 13) "$num1$operation$num2=\n$resolution" else "$num1$operation$num2=$resolution"
             }
             7->{
                 "demasiados numeros"
@@ -181,7 +181,7 @@ class Calculation {
      * segun la [operation] que tengamos guardada llama a una funcion de calculo o a otra y
      * actualiza el [state] a 5 para que al pulsar el siguiente boton pasemos a otra operacion
      * esto lo hacemos dentro de un try & catch para en caso de que la cuenta sea demasiado grande
-     * (error de tamaño) demos [state] 7
+     * (error de tamaño o de cuentas) demos [state] 7
      * */
     private fun calculate(){
         try {
@@ -205,7 +205,7 @@ class Calculation {
             }
 
             state = 5
-            if (resolution.length>9) throw Exception("a")
+            if (resolution.length>9) throw Exception("error de cuentas")
 
         }catch (e:Exception){
             state = 7
