@@ -6,11 +6,12 @@ package com.example.calc
 class Calculation {
 
     /**
-     * @property num1 y
-     * @property num2 albergan los numeros antes y despues del [operation], respectivamente
+     * @property num1 alberga los numeros antes del [operation]
      * */
     private var num1 = ""
-
+    /**
+     * @property num2 alberga los numeros despues del [operation]
+     * */
     private var num2 = ""
 
     /**
