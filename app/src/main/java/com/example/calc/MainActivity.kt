@@ -25,13 +25,10 @@ class MainActivity : AppCompatActivity() {
 
         start()
 
-        /**
-         * forzamos el tema de la app a claro, porque hay dispositivos (el mio) que lo fuerzan a
-         * oscuro y queda mal
-         * */
+        //forzamos el tema de la app a claro, porque hay dispositivos (el mio) que lo fuerzan a
+        //oscuro y queda mal
+
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-
-
 
     }
 
