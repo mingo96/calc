@@ -17,4 +17,6 @@
     <string name="minus">-</string>
     <string name="sum">+</string>
     <string name="times">*</string>
+    <string name="erase"><![CDATA[<]]></string>
+    <string name="dot">.</string>
 </resources>
