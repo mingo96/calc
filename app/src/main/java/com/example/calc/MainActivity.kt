@@ -54,7 +54,9 @@ class MainActivity : AppCompatActivity() {
             findViewById(R.id.minus),
             findViewById(R.id.sum),
             findViewById(R.id.times),
-            findViewById(R.id.calculate))
+            findViewById(R.id.calculate),
+            findViewById(R.id.buttonErase),
+            findViewById(R.id.buttonDot))
 
         for (button in buttons){
 

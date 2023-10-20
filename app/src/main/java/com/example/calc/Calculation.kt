@@ -53,7 +53,7 @@ class Calculation {
 
         when(pressedButton){
 
-             //[state] pasa a ser 3si el [pressedButton] es un [operators] Y no estamos en [state]
+             //[state] pasa a ser 3 si el [pressedButton] es un [operators] Y no estamos en [state]
              //5, ya que esto significa que acabamos de pulsar =, en caso de que lo sea se
              //comprobará mas tarde y se hará lo pertinente
 
@@ -164,12 +164,14 @@ class Calculation {
      * @param added representa el numero a añadir
      * */
     private fun addNumber(added : String){
+        //solo ponemos el punto si aun no lo hay
         when(state){
             1->{
-                num1 +=added
+                if((added == "." && !num1.contains(".") || added!="."))num1 +=added
             }
             2->{
-                num2+=added
+
+                if((added == "." && !num2.contains(".") || added!="."))num2 +=added
             }
         }
     }
@@ -202,7 +204,9 @@ class Calculation {
             }
 
             state = 5
-            if (resolution.length>9) throw Exception("error de cuentas")
+            if (resolution.length>9 && resolution.split(".")[1].length>=3) {
+                resolution = resolution.split(".")[0]+"."+resolution.split(".")[1].substring(0..2)
+            }
 
         }catch (e:Exception){
             state = 7
@@ -218,20 +222,20 @@ class Calculation {
      * */
 
     private fun sum(){
-        resolution = (num1.toInt() + num2.toInt()).toString()
+        resolution = (num1.toDouble() + num2.toDouble()).toString()
     }
 
     private fun substract(){
-        resolution = (num1.toInt() - num2.toInt()).toString()
+        resolution = (num1.toDouble() - num2.toDouble()).toString()
     }
 
     private fun multiply(){
-        resolution = (num1.toInt() * num2.toInt()).toString()
+        resolution = (num1.toDouble() * num2.toDouble()).toString()
 
     }
 
     private fun divide(){
-        resolution = (num1.toInt() / num2.toInt()).toString()
+        resolution = (num1.toDouble() / num2.toDouble()).toString()
     }
 
     /**
