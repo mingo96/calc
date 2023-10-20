@@ -41,68 +41,64 @@ class Calculation {
      * */
     fun screenChange(pressedButton:String){
 
-        /**
-         * *arreglo de error* creamos [state] 7 para el caso de que tengamos mas numeros de los
-         * permitidos, este devolverá una cadena de error, cualdo pulsen el siguiente boton
-         * (el codigo de aqui) reiniciamos y sigue con normalidad
-         * */
+         //*arreglo de error* creamos [state] 7 para el caso de que tengamos mas numeros de los
+         //permitidos, este devolverá una cadena de error, cualdo pulsen el siguiente boton
+         //(el codigo de aqui) reiniciamos y sigue con normalidad
         if (state == 7){
             clear()
         }
 
-        /**
-         * este when redirecciona [state] segun el boton presionado y la situación
-         * */
+        //este when redirecciona [state] segun el boton presionado y la situación
+
         when(pressedButton){
 
-            /**
-             * [state] pasa a ser 3si el [pressedButton] es un [operators] Y no estamos en [state]
-             * 5, ya que esto significa que acabamos de pulsar =, en caso de que lo sea se
-             * comprobará mas tarde y se hará lo pertinente
-             * */
+             //[state] pasa a ser 3si el [pressedButton] es un [operators] Y no estamos en [state]
+             //5, ya que esto significa que acabamos de pulsar =, en caso de que lo sea se
+             //comprobará mas tarde y se hará lo pertinente
+
             in operators->{
                 if (state!=5)
                 state = 3
             }
-            /**
-             * si el [pressedButton] es = y no estamos en [state] 1 (escribir primer numero) ni en
-             * [state] 3 (acabamos de presionar un operador), entramos a estado 4
-             * tampoco cambiamos de [state] si ya estamos en 2 pero [num2] esta vacío
-             * */
+
+             //si el [pressedButton] es = y no estamos en [state] 1 (escribir primer numero) ni en
+             //[state] 3 (acabamos de presionar un operador), entramos a estado 4
+             //tampoco cambiamos de [state] si ya estamos en 2 pero [num2] esta vacío
+
             "="->{
                 if (state!=1 && state!= 3 && (num2.isNotEmpty() && state==2))
                 state = 4
             }
-            /**
-             * si el [pressedButton] es CE entramos a [state] 6
-             * */
+
+             //si el [pressedButton] es CE entramos a [state] 6
+
             "CE"->{
                 state = 6
             }
         }
 
-        /**
-         * cada [state] representa una cosa diferente,
-         * 1 y 2 representan estar recibiendo numeros para [num1] y [num2], respectivamente
-         * 3 representa haber recibido un [operation]
-         * 4 representa haber pulsado =
-         * 5 representa que acabamos de pulsar un boton despues de = y no ha sido un numero
-         * 6 representa que hemos pulsado CE
-         * */
+
+         //cada [state] representa una cosa diferente,
+         //1 y 2 representan estar recibiendo numeros para [num1] y [num2], respectivamente
+         //3 representa haber recibido un [operation]
+         //4 representa haber pulsado =
+         //5 representa que acabamos de pulsar un boton despues de = y no ha sido un numero
+         //6 representa que hemos pulsado CE
+
         when(state){
             in 1..2->{
-                /**
-                 * comprueba que el [pressedButton] no es =, para evitar erratas, sobre to do
-                 * cuando [state] es 1
-                 * */
+
+                 //comprueba que el [pressedButton] no es =, para evitar erratas, sobre to do
+                 //cuando [state] es 1
+
                 if (pressedButton != "=")
                 addNumber(pressedButton)
             }
             3->{
-                /**
-                 * si [num1] no esta vacío, podemos guardar el [operation] y pasar a [state] 2, en caso
-                 * contrario volvemos a [state] 1
-                 * */
+
+                 //si [num1] no esta vacío, podemos guardar el [operation] y pasar a [state] 2, en caso
+                 //contrario volvemos a [state] 1
+
                 if (num1.isNotEmpty()){
                     operation = pressedButton
                     state = 2
@@ -112,11 +108,11 @@ class Calculation {
                 calculate()
             }
             5->{
-                /**
-                 * reasignamos valores, si el [pressedButton] esta en [operators] se lo damos a [operation]
-                 * y pasamos a [state] 2, si es = no hacemos nada, si es numero limpiamos y añadimos
-                 * el [pressedButton]
-                 * */
+
+                 //reasignamos valores, si el [pressedButton] esta en [operators] se lo damos a [operation]
+                 //y pasamos a [state] 2, si es = no hacemos nada, si es numero limpiamos y añadimos
+                 //el [pressedButton]
+
                 num1 = resolution
                 num2 = ""
                 if (pressedButton in operators) {
