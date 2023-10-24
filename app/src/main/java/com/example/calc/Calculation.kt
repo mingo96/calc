@@ -168,10 +168,18 @@ class Calculation {
         when(state){
             1->{
                 if((added == "." && !num1.contains(".") || added!="."))num1 +=added
+                if(added == "<") num1 = num1.dropLast(2)
             }
             2->{
 
                 if((added == "." && !num2.contains(".") || added!="."))num2 +=added
+
+                if(added == "<") num2 = num2.dropLast(2)
+
+                //si num2 acaba estando vacio volvemos a estado 1
+                if(num2.isEmpty()){
+                    state = 1
+                }
             }
         }
     }
