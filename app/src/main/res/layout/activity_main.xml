@@ -118,7 +118,7 @@
                             android:id="@+id/button7"
                             android:layout_width="wrap_content"
                             android:layout_height="95dp"
-                            android:text="@string/seven_button"
+                            android:text="@string/button_7"
                             android:layout_margin="2sp"
                             tools:ignore="ButtonStyle"
                     android:textSize="30sp"/>
@@ -127,7 +127,7 @@
                             android:id="@+id/button8"
                             android:layout_width="wrap_content"
                             android:layout_height="95sp"
-                            android:text="@string/eight_button"
+                            android:text="@string/button_8"
                             android:layout_margin="2sp"
                             tools:ignore="ButtonStyle"
                     android:textSize="30sp"/>
@@ -136,7 +136,7 @@
                             android:id="@+id/button9"
                             android:layout_width="wrap_content"
                             android:layout_height="95sp"
-                            android:text="@string/nine_button"
+                            android:text="@string/button_9"
                             android:layout_margin="2sp"
                             tools:ignore="ButtonStyle"
                     android:textSize="30sp"/>
@@ -151,7 +151,7 @@
                             android:id="@+id/button4"
                             android:layout_width="wrap_content"
                             android:layout_height="95sp"
-                            android:text="@string/four_button"
+                            android:text="@string/button_4"
                     android:layout_margin="2sp"
                             tools:ignore="ButtonStyle"
                     android:textSize="30sp"/>
@@ -159,7 +159,7 @@
                             android:id="@+id/button5"
                             android:layout_width="wrap_content"
                             android:layout_height="95sp"
-                            android:text="@string/five_button"
+                            android:text="@string/button_5"
                     android:layout_margin="2sp"
                             tools:ignore="ButtonStyle"
                     android:textSize="30sp"/>
@@ -168,7 +168,7 @@
                             android:id="@+id/button6"
                             android:layout_width="wrap_content"
                             android:layout_height="95sp"
-                            android:text="@string/six_button"
+                            android:text="@string/button_6"
                             android:layout_margin="2sp"
                             android:textSize="30sp" />
                     </LinearLayout>
@@ -207,7 +207,7 @@
                             android:id="@+id/button1"
                             android:layout_width="wrap_content"
                             android:layout_height="95sp"
-                            android:text="@string/one_button"
+                            android:text="@string/button_1"
                             android:layout_margin="2sp"
                             android:textSize="30sp" />
 
@@ -215,7 +215,7 @@
                             android:id="@+id/button2"
                             android:layout_width="wrap_content"
                             android:layout_height="95sp"
-                            android:text="@string/two_button"
+                            android:text="@string/button_2"
                             android:layout_margin="2sp"
                             android:textSize="30sp" />
 
@@ -223,7 +223,7 @@
                             android:id="@+id/button3"
                             android:layout_width="wrap_content"
                             android:layout_height="95sp"
-                            android:text="@string/three_button"
+                            android:text="@string/button_3"
                             android:layout_margin="2sp"
                             android:textSize="30sp" />
                     </LinearLayout>
@@ -246,7 +246,7 @@
                             android:id="@+id/button0"
                             android:layout_width="wrap_content"
                             android:layout_height="95sp"
-                            android:text="@string/zero_button"
+                            android:text="@string/button_0"
                             android:layout_margin="2sp"
                             android:textSize="30sp" />
 

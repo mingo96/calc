@@ -1,16 +1,16 @@
 <resources>
     <string name="app_name">Calc By Eloy Martos Cobos</string>
     <string name="screen_text">start</string>
-    <string name="zero_button">0</string>
-    <string name="one_button">1</string>
-    <string name="two_button">2</string>
-    <string name="three_button">3</string>
-    <string name="four_button">4</string>
-    <string name="five_button">5</string>
-    <string name="six_button">6</string>
-    <string name="seven_button">7</string>
-    <string name="eight_button">8</string>
-    <string name="nine_button">9</string>
+    <string name="button_0">0</string>
+    <string name="button_1">1</string>
+    <string name="button_2">2</string>
+    <string name="button_3">3</string>
+    <string name="button_4">4</string>
+    <string name="button_5">5</string>
+    <string name="button_6">6</string>
+    <string name="button_7">7</string>
+    <string name="button_8">8</string>
+    <string name="button_9">9</string>
     <string name="calculate">=</string>
     <string name="clear">CE</string>
     <string name="divide">/</string>

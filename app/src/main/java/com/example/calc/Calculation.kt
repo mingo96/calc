@@ -108,11 +108,12 @@ class Calculation {
             4->{
                 calculate()
             }
-            5->{
+            5->if(pressedButton!= "="){
 
                  //reasignamos valores, si el [pressedButton] esta en [operators] se lo damos a [operation]
                  //y pasamos a [state] 2, si es = no hacemos nada, si es numero limpiamos y añadimos
                  //el [pressedButton]
+                 //nada de esto pasa si han vuelto a presionar =
 
                 num1 = resolution
                 num2 = ""
@@ -120,7 +121,7 @@ class Calculation {
                     operation = pressedButton
                     state = 2
                 }
-                else if(pressedButton != "=") {
+                else {
                     clear()
                     addNumber(pressedButton)
                 }
